@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index-02</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        window.onload = () => {
+            document.querySelector('.nav_btn').addEventListener('click', () => {
+               document.querySelector('.nav_mobile').classList.add('active');
+            });
+
+             document.querySelector('.close_button').addEventListener('click', () => {
+               document.querySelector('.nav_mobile').classList.remove('active');
+            });
+
+        };//script end
+    </script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="inner">
+            <h1 class="logo">
+                <a href="#"><img src="img/logo.svg" alt=""></a>
+            </h1><!-- .logo -->
+
+            
+            <!-- pc버전 -->
+            <nav class="nav_pc pc">
+                <ul class="gnb">
+                    <li><a href="#">ABOUTS</a></li>
+                    <li><a href="#">WORKS</a></li>
+                    <li><a href="#">SOLUTIONS</a></li>
+                    <li><a href="#">INSIGHTS</a></li>
+                    <li><a href="#">CAREERS</a></li>
+                    <li><a href="#">CONTACTS</a></li>
+                </ul><!-- gnb -->
+            </nav><!-- nav_pc -->
+
+            <ul class="lang pc">
+                <li><a href="#">KOR</a></li>
+                <li><a href="#">ENG</a></li>
+            </ul><!-- .lang -->
+
+            <!-- 모바일버전 -->
+            <botton class="nav_btn mobile">
+                <img src="img/btn_menu.svg" alt="메뉴버튼">
+            </botton><!-- nav_btn -->
+
+            <nav class="nav_mobile mobile">
+
+                <div class="close_button">
+                    <img src="img/ic_close.svg" alt="메뉴닫기">
+                </div><!-- .close_button -->
+
+                <ul class="gnb">
+                    <li><a href="#">ABOUTS</a></li>
+                    <li><a href="#">WORKS</a></li>
+                    <li><a href="#">SOLUTIONS</a></li>
+                    <li><a href="#">INSIGHTS</a></li>
+                    <li><a href="#">CAREERS</a></li>
+                    <li><a href="#">CONTACTS</a></li>
+                </ul><!-- gnb -->
+
+
+                <ul class="lang">
+                    <li><a href="#">KOR</a></li>
+                    <li><a href="#">ENG</a></li>
+                </ul><!-- .lang -->
+            </nav><!-- nav_mobile -->
+
+        </div><!-- .inner -->
+    </header><!-- .header -->
+
+
+
+    <main class="main">
+        <section class="main_visual">
+            <img src="img/kv.png" alt="">
+        </section><!-- main_visual -->
+    </main><!-- .main -->
+</body>
+
+</html>
