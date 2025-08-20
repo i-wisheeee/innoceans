@@ -1,0 +1,204 @@
+@charset "utf-8";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+ /* font-family: "Inter", sans-serif; */
+/* 일단 주석처리후 필요할때 복사해서 넣기 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    background-color: black;
+     font-family: "Inter", sans-serif;
+     font-weight: 400;
+     color: #fff;
+    position: relative;
+    }
+
+button {
+    border: 0;
+    background-color: transparent;
+}
+
+.mobile {
+    display: none;
+}
+
+
+/* 헤더시작 */
+.header {
+    height: 87.84px;
+    padding: 0 39.96px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.header .inner {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+/* 헤더-로고 */
+.header .inner .logo {
+    width: 173.88px;
+}
+.header .inner .logo a {
+    display: block;  /* a태그여서 블록을 걸어준다 */
+    width: 100%;
+    }   
+.header .inner .logo a img {
+    width: 100%;
+    
+}
+
+
+
+
+/* 헤더-메뉴 */
+.header .inner .nav_pc .gnb {
+    display: flex;
+    gap: 5px;
+}
+.header .inner .nav_pc .gnb li:hover  {
+    background-color: #fff;
+    color: black;
+    transition: all 0.7s;
+    font-size: 18px;
+    border-radius: 20px;
+    width: 100%;
+}
+.header .inner .nav_pc .gnb li {
+    display: block;/* 수치가 안잡혀서 걸어줌 */
+    padding: 5.94px 11px;
+    font-size: 15.84px;
+}
+.header .inner .nav_pc .gnb li a {
+    
+}
+
+.header .inner .lang {
+    display: flex;
+    gap: 15.84px;
+    
+}
+
+/* 헤더-언어 */
+.header .inner .lang li {
+    font-size: 14.04px;
+}
+.header .inner .lang li:nth-child(2) {
+color: #9f9fa1;
+}
+
+/* 메인시작 */
+
+.main_visual {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* img는 인라인태그임-> 수직수평가운데하려면 비주얼에 flex,center걸어줘야함 */
+.main_visual img {
+width: 757.984px;
+}
+
+
+
+/* 미디어 쿼리 시작 */
+
+@media screen and (max-width: 1024px) {
+    .pc,
+    .header .inner .lang.pc {display: none;} 
+    /* 우선순위는 선택자가 많은것이 이기므로 선택자 전체적기 */
+    .mobile {display: block;}
+
+    .header {
+        height: 72px;
+        padding: 0 24px;
+    }
+
+    .header .inner .logo {
+     width: 148px;   
+    }
+    .header .inner .nav_mobile {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    right: -100%;
+    top: 0;
+    background-color: #000000;
+    padding: 155px 32px 24px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end; /* 아이템 우측정렬 */
+    text-align: right;/* 글자 우측정렬 */
+    transition: all 0.7s;
+}
+    .header .inner .nav_mobile .close_button {
+    position: absolute;
+    top: 17px;
+    right: 24px;
+    
+    }
+    .header .inner .nav_mobile .gnb  {
+    display:flex;
+    flex-direction: column;
+        gap: 24px;
+    }
+    .header .inner .nav_mobile .gnb li {
+        font-size: 55px;
+        font-weight: 700;
+        
+    }
+
+    .header .inner .nav_mobile .gnb li {
+    display: block;
+    padding: 6px 8px;
+    }
+
+    .header .inner .nav_mobile.active {
+    right: 0;
+}
+
+}/* 1024 */
+
+@media screen and (max-width: 480px) {
+    .main_visual img {
+        width: 318px;
+    }
+.header .inner .nav_mobile .gnb li {
+    display: block;
+}
+.header .inner .nav_mobile .gnb li a {
+display: inline-block;
+padding: 6px 12px;
+transition: all 0.3s ease;
+color: #fff;
+border-radius: 20px;
+}
+
+.header .inner .nav_mobile .gnb li:hover a {
+background-color: inherit;
+border: 1px solid #fff;
+color: #fff;
+
+}
+
+}
+
